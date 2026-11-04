@@ -3,64 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Úvod | Nultá generace počítačů</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --ink: #202820;
-      --green: #426a4a;
-      --yellow: #e8c65c;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      display: grid;
-      min-height: 100vh;
-      place-items: center;
-      margin: 0;
-      padding: 24px;
-      background: #ffffff;
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-      text-align: center;
-    }
-
-    main { max-width: 700px; }
-
-    h1 {
-      margin: 0 0 28px;
-      font-size: clamp(2.5rem, 8vw, 4rem);
-      line-height: 1.1;
-    }
-
-    a {
-      display: inline-flex;
-      min-height: 50px;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      padding: 0 20px;
-      background: var(--green);
-      color: #ffffff;
-      font: bold 1rem/1.4 Arial, sans-serif;
-      text-decoration: none;
-      transition: background-color .18s ease, transform .18s ease;
-    }
-
-    a::after { content: "->"; }
-    a:hover { transform: translateY(-2px); background: #315239; }
-    a:focus-visible { outline: 3px solid var(--yellow); outline-offset: 4px; }
-
-    @media (prefers-reduced-motion: reduce) {
-      a { transition: none; }
-    }
-  </style>
+  <title>Úvod | Generace počítačů</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="home-page">
   <main>
-    <h1>Nultá generace počítačů</h1>
-    <a href="nulta-generace.html">Přejít na hlavní stránku</a>
+    <h1>Generace počítačů</h1>
+    <nav class="generation-links" aria-label="Generace počítačů">
+      <a href="nulta-generace.html">Nultá a první generace</a>
+      <a href="druha-generace.html">Druhá generace</a>
+    </nav>
   </main>
 </body>
 </html>

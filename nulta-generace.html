@@ -5,91 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Sebastian Bitto">
   <title>Nultá a první generace počítačů</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --ink: #5b8164;
-      --muted: #5a635b;
-      --paper: #ffffff;
-      --line: #cbd2c9;
-      --green: #426a4a;
-      --soft-green: #eef3ec;
-      --soft-yellow: #fff7dc;
-      --header: #666666;
-      --nav: #cccccc;
-      --content: #f1f1f1;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: #ffffff;
-      color: var(--ink);
-      font: 16px/1.5 Arial, sans-serif;
-    }
-
-    main {
-      width: 100%;
-    }
-
-    h1, h2, h3 { line-height: 1.2; }
-    h1 { margin: 0; color: #ffffff; font: bold 2rem Georgia, "Times New Roman", serif; }
-    h2 { margin-top: 30px; padding: 7px 10px; border-left: 4px solid var(--green); background: var(--soft-green); font-size: 1.25rem; }
-    h3 { margin-top: 0; font-size: 1.08rem; }
-    p { max-width: 75ch; }
-    a { color: #234d34; overflow-wrap: anywhere; }
-    .site-header { background: var(--header); padding: 24px 30px; text-align: center; }
-    .layout { display: grid; grid-template-columns: 30% minmax(0, 70%); }
-    nav { background: var(--nav); padding: 20px; }
-    nav ul { list-style: none; margin: 0; padding: 0; }
-    nav li + li { margin-top: 10px; }
-    nav a { display: block; padding: 8px 10px; color: #202820; text-decoration: none; }
-    nav a:hover, nav a:focus { background: #ffffff; text-decoration: underline; }
-    .content { min-width: 0; padding: 20px; background: var(--content); }
-    .content-header h2 { margin-top: 0; padding: 0; border: 0; background: transparent; }
-    .intro { color: var(--muted); margin: 8px 0 22px; }
-    .student { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 10px 0; color: var(--muted); }
-    .note { padding: 12px 14px; background: var(--soft-yellow); border-left: 4px solid #b58b18; }
-    .diagram { margin: 16px 0 8px; padding: 10px; border: 1px solid var(--line); background: #fff; overflow-x: auto; }
-    .diagram svg { display: block; width: 100%; min-width: 440px; height: auto; }
-    .caption { margin: 6px 0 0; font-size: .92rem; color: var(--muted); }
-    .models { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
-    .model { padding: 14px; border: 1px solid var(--line); background: #fff; }
-    .model p { margin: 8px 0; }
-    .circuit { margin: 12px 0; padding: 6px; border: 1px solid var(--line); background: #fff; overflow-x: auto; }
-    .circuit svg { display: block; width: 100%; min-width: 360px; height: auto; }
-    table { width: 100%; border-collapse: collapse; margin-top: 12px; font-family: Arial, sans-serif; font-size: .94rem; }
-    th, td { padding: 7px 9px; border: 1px solid var(--line); text-align: left; }
-    th { background: var(--soft-green); }
-    .cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; }
-    .history-card { padding: 14px; border: 1px solid var(--line); background: #fff; }
-    .history-card dl { margin: 0; }
-    .history-card dt { margin-top: 9px; font-weight: bold; }
-    .history-card dd { margin-left: 0; }
-    .source { font-size: .9rem; }
-    .photo { max-width: 760px; margin: 16px 0; padding: 14px; border: 1px solid var(--line); background: #fff; }
-    .photo img { display: block; width: 100%; height: auto; }
-    .photo figcaption { margin-top: 10px; color: var(--muted); font-size: .92rem; }
-    .flow { display: grid; grid-template-columns: repeat(5, auto); align-items: center; justify-content: center; gap: 12px; margin: 16px 0; }
-    .flow-step { min-width: 130px; padding: 12px; border: 1px solid var(--line); background: #fff; text-align: center; }
-    .flow-arrow { color: var(--green); font-size: 1.5rem; font-weight: bold; }
-    .demo { margin-top: 12px; padding: 12px; border: 1px solid var(--line); background: #fff; }
-    .demo label { display: block; font-weight: bold; }
-    .demo input { width: 8rem; margin: 6px 0; padding: 7px; font: inherit; }
-    .demo ol { margin-bottom: 0; }
-    footer { background: #777777; margin: 0; padding: 10px 20px; color: #ffffff; text-align: center; font-size: .9rem; }
-    footer p { margin: 0 auto; }
-
-    @media (max-width: 600px) {
-      .layout { grid-template-columns: 1fr; }
-      .models, .cards { grid-template-columns: 1fr; }
-      .site-header { padding: 22px 18px; }
-      .content { padding: 18px; }
-      .flow { grid-template-columns: 1fr; gap: 6px; }
-      .flow-arrow { transform: rotate(90deg); }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <main>
@@ -100,6 +17,8 @@
     <section class="layout">
       <nav aria-label="Obsah stránky">
         <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="druha-generace.html">Druhá generace počítačů</a></li>
           <li><a href="#prvni-generace">První generace počítačů</a></li>
           <li><a href="#rele">Jak funguje relé</a></li>
           <li><a href="#logika">Dva spínače a logika</a></li>
@@ -345,28 +264,5 @@
     </footer>
   </main>
 
-  <script>
-    const factorInput = document.querySelector("#factor");
-    const resultItems = document.querySelectorAll("[data-multiple]");
-    const calculationStatus = document.querySelector("#calculation-status");
-
-    factorInput.addEventListener("input", () => {
-      const factor = Number(factorInput.value);
-
-      if (!Number.isInteger(factor) || factor < 1 || factor > 1000) {
-        resultItems.forEach((item) => {
-          item.textContent = "—";
-        });
-        calculationStatus.textContent = "Zadej celé číslo od 1 do 1000.";
-        return;
-      }
-
-      resultItems.forEach((item, index) => {
-        const multiplier = index + 1;
-        item.textContent = `${factor} × ${multiplier} = ${factor * multiplier}`;
-      });
-      calculationStatus.textContent = `Výsledky pro číslo ${factor}:`;
-    });
-  </script>
 </body>
 </html>

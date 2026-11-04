@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Sebastian Bitto">
+  <title>Druhá generace počítačů</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header class="site-header">
+      <h1>Druhá generace</h1>
+    </header>
+
+    <section class="layout">
+      <nav aria-label="Obsah stránky">
+        <ul>
+          <li><a href="index.html">Úvod</a></li>
+          <li><a href="nulta-generace.html">Nultá a první generace</a></li>
+          <li><a href="#model">Krok 1: Model spínače</a></li>
+          <li><a href="#pocitac">Krok 2: Tranzistorový počítač</a></li>
+          <li><a href="#srovnani">Krok 3: Srovnání</a></li>
+          <li><a href="#casova-osa">Krok 4: Časová osa</a></li>
+          <li><a href="#otazky">Krok 5: Kontrolní otázky</a></li>
+        </ul>
+      </nav>
+
+      <article class="content">
+        <header class="content-header">
+          <h2>Od elektronky k tranzistoru</h2>
+          <p class="intro">Tranzistor může fungovat jako spínač nebo zesilovač. Ve druhé generaci počítačů nahradil elektronky v mnoha obvodech a pomohl zmenšit a zefektivnit zařízení.</p>
+        </header>
+
+        <p class="note"><strong>Důležité rozlišení:</strong> Tranzistor je součástka, ne celý procesor ani počítač. Číslicové obvody propojují mnoho spínacích prvků do složitější logiky. V následujícím modelu je tranzistor znázorněn jako řízený spínač, nikoli jako skutečné elektrické zapojení.</p>
+
+        <section id="model">
+          <h2>1. Funkční model tranzistoru jako spínače</h2>
+          <p>Vstupní signál řídí spínač. Při signálu 0 je spínač otevřený a zátěž je vypnutá; při signálu 1 se spínač sepne a zátěž se zapne. Nákres je funkční pomůcka, ne návod k zapojení součástek.</p>
+          <div class="diagram">
+            <svg viewBox="0 0 760 240" role="img" aria-labelledby="transistor-title transistor-desc">
+              <title id="transistor-title">Funkční model tranzistoru jako řízeného spínače</title>
+              <desc id="transistor-desc">Vstupní signál ovládá tranzistorový spínač. Spínač řídí tok proudu ke zátěži, zde znázorněné žárovkou.</desc>
+              <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                  <polygon points="0 0, 10 3.5, 0 7" fill="#263329" />
+                </marker>
+              </defs>
+              <g fill="none" stroke="#263329" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="30" y="72" width="160" height="80" rx="8" fill="#eef3ec" />
+                <path d="M190 112 H260" marker-end="url(#arrowhead)" />
+                <rect x="280" y="52" width="200" height="120" rx="8" fill="#ffffff" />
+                <path d="M480 112 H560" marker-end="url(#arrowhead)" />
+              </g>
+              <path d="M330 112 H370 M370 90 V134 M370 112 H420" fill="none" stroke="#263329" stroke-width="4" stroke-linecap="round" />
+              <circle id="switch-load" cx="625" cy="112" r="25" fill="#ffffff" stroke="#263329" stroke-width="4" />
+              <path d="M608 129 L642 95 M625 78 V65" fill="none" stroke="#263329" stroke-width="3" />
+              <g fill="#202820" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+                <text x="110" y="106">Vstupní</text><text x="110" y="130">signál 0 / 1</text>
+                <text x="380" y="84">Tranzistor</text><text x="380" y="155">řízený spínač</text>
+                <text x="625" y="164">Zátěž</text>
+                <text x="520" y="93">výstup</text>
+              </g>
+            </svg>
+            <p class="caption">Vlastní funkční náčrt: signál řídí spínač a ten zapíná nebo vypíná zátěž.</p>
+            <div class="switch-demo">
+              <button id="transistor-switch" type="button" aria-pressed="false">Vstupní signál: 0 (zapnout)</button>
+              <p id="switch-status" class="switch-status" aria-live="polite">Vstup 0 → tranzistor nevede proud → zátěž vypnutá.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pocitac">
+          <h2>2. Karta tranzistorového počítače: IBM 1401</h2>
+          <article class="history-card">
+            <h3>IBM 1401</h3>
+            <dl>
+              <dt>Rok</dt><dd>1959</dd>
+              <dt>Využití</dt><dd>Zpracování obchodních dat, například účetnictví, fakturace a evidence zásob.</dd>
+              <dt>Výrobce</dt><dd>IBM (International Business Machines).</dd>
+              <dt>Proč patří do tématu</dt><dd>Počítač používal tranzistorové obvody; není to „jeden tranzistor“, ale celý systém sestavený z mnoha součástek.</dd>
+            </dl>
+            <p class="source"><strong>Zdroje:</strong> IBM, <a href="https://www.ibm.com/history/1401" target="_blank" rel="noopener noreferrer">IBM 1401 Data Processing System</a>, a Computer History Museum, <a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank" rel="noopener noreferrer">The Silicon Engine: Timeline</a>. Přístup 4. 11. 2026.</p>
+          </article>
+        </section>
+
+        <section id="srovnani">
+          <h2>3. Elektronka versus tranzistor</h2>
+          <p>Srovnání popisuje obecné vlastnosti součástek a jejich běžný dopad na návrh počítačů; nejde o stejný číselný poměr pro všechny stroje.</p>
+          <table>
+            <thead>
+              <tr><th>Vlastnost</th><th>Elektronka</th><th>Tranzistor</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Velikost</th><td>Obvykle větší součástka, která potřebuje místo pro skleněnou baňku.</td><td>Obvykle menší součástka; obvody tak mohly být kompaktnější.</td></tr>
+              <tr><th scope="row">Spotřeba a teplo</th><td>Často vyžaduje více energie a vytváří více tepla, mimo jiné kvůli zahřívání katody.</td><td>Obvykle má nižší spotřebu a méně se zahřívá, záleží však na typu a zapojení.</td></tr>
+              <tr><th scope="row">Spínání</th><td>Řídí tok elektronů ve vakuové baňce bez pohyblivého kontaktu.</td><td>Řídí proud v polovodičovém materiálu; může pracovat jako elektronický spínač.</td></tr>
+              <tr><th scope="row">Odolnost a údržba</th><td>Křehká baňka a provozní teplo zvyšují nároky na chlazení a výměnu vadných součástek.</td><td>Pevná polovodičová součástka je odolnější vůči otřesům a nevyžaduje žhavenou katodu.</td></tr>
+              <tr><th scope="row">Rozměry celého stroje</th><td>Mnoho elektronek přispívalo k velkým a náročným počítačům.</td><td>Menší součástky umožnily navrhovat menší počítače; výsledek závisel také na dalších částech stroje.</td></tr>
+            </tbody>
+          </table>
+          <p class="source"><strong>Zdroj k vývoji tranzistorů a polovodičů:</strong> Computer History Museum, <a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank" rel="noopener noreferrer">The Silicon Engine: Timeline</a>. Přístup 4. 11. 2026. Popisy jsou vlastní shrnutí obecných rozdílů.</p>
+        </section>
+
+        <section id="casova-osa">
+          <h2>4. Časová osa spínacích technologií</h2>
+          <div class="timeline" aria-label="Vývoj od mechanických prvků k tranzistorům">
+            <article class="timeline-step">
+              <h3>Mechanika</h3>
+              <p>Ozubená kola prováděla výpočty bez elektronického spínání. <strong>Přínos změny:</strong> mechanické součástky umožnily výpočty automatizovat.</p>
+            </article>
+            <article class="timeline-step">
+              <h3>Relé</h3>
+              <p>Elektromagnet pohyboval kontaktem a ovládal elektrický obvod. <strong>Přínos změny:</strong> elektrické řízení dovolilo sestavovat programovatelné stroje.</p>
+            </article>
+            <article class="timeline-step">
+              <h3>Elektronka</h3>
+              <p>Elektronický prvek spínal proud bez mechanicky pohyblivého kontaktu. <strong>Přínos změny:</strong> počítače pracovaly rychleji než s relé.</p>
+            </article>
+            <article class="timeline-step">
+              <h3>Tranzistor</h3>
+              <p>Polovodič nahradil elektronku v řadě obvodů. <strong>Přínos změny:</strong> zařízení mohla být menší, úspornější a méně náročná na chlazení.</p>
+            </article>
+          </div>
+          <p class="source"><strong>Historický přehled:</strong> Computer History Museum, <a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank" rel="noopener noreferrer">The Silicon Engine: Timeline</a>. Přístup 4. 11. 2026. Časová osa je zjednodušená: technologie se v různých strojích překrývaly.</p>
+        </section>
+
+        <section id="otazky">
+          <h2>5. Kontrolní otázky a odpovědi</h2>
+          <ol>
+            <li><strong>Co dělá tranzistor v modelu spínače?</strong><br>Vstupní signál řídí, zda tranzistor dovolí průchod proudu do zátěže.</li>
+            <li><strong>Je tranzistor totéž co procesor?</strong><br>Ne. Tranzistor je jedna součástka; procesor obsahuje mnoho propojených obvodů a součástek.</li>
+            <li><strong>Uveď jeden důvod, proč tranzistory pomohly zmenšit počítače.</strong><br>Jednotlivý tranzistor je obvykle menší než elektronka, takže obvod mohl být sestaven kompaktněji.</li>
+            <li><strong>K čemu sloužil počítač IBM 1401?</strong><br>Ke zpracování obchodních dat, například účetních a skladových záznamů.</li>
+          </ol>
+        </section>
+
+        <p class="note"><strong>Kontrola před odevzdáním:</strong> Nezaměňuji tranzistor s integrovaným obvodem ani celým počítačem. Údaje z externích zdrojů mají uveden název, odkaz a datum přístupu.</p>
+        <nav class="generation-links" aria-label="Další stránky">
+          <a href="nulta-generace.html">Předchozí: Nultá a první generace</a>
+          <a href="index.html">Zpět na úvod</a>
+        </nav>
+      </article>
+    </section>
+
+    <footer>
+      <p>Výukový protokol: druhá generace počítačů.</p>
+    </footer>
+  </main>
+</body>
+</html>
