@@ -17,32 +17,49 @@
     <section class="layout">
       <nav aria-label="Obsah stránky">
         <ul>
-          <li><a href="#rele">1. Jak funguje relé</a></li>
-          <li><a href="#logika">2. Dva spínače a modelová žárovka</a></li>
-          <li><a href="#historie">3. Historické karty</a></li>
-          <li><a href="#porovnani">4. Reléový stroj a mechanická kalkulačka</a></li>
-          <li><a href="#omezeni">5. Omezení reléových počítačů</a></li>
-          <li><a href="#prvni-generace">6. První generace počítačů</a></li>
-          <li><a href="#druha-generace">7. Druhá generace počítačů</a></li>
-          <li><a href="#model">7.1 Model tranzistoru</a></li>
-          <li><a href="#pocitac">7.2 IBM 1401</a></li>
-          <li><a href="#srovnani">7.3 Elektronka versus tranzistor</a></li>
-          <li><a href="#casova-osa">7.4 Časová osa</a></li>
-          <li><a href="#otazky">7.5 Kontrolní otázky</a></li>
+          <li>
+            <a href="#nulta-generace">0. Nultá generace</a>
+            <ul>
+              <li><a href="#rele">0.1 Jak funguje relé</a></li>
+              <li><a href="#logika">0.2 Dva spínače a modelová žárovka</a></li>
+              <li><a href="#historie">0.3 Historické karty</a></li>
+              <li><a href="#porovnani">0.4 Reléový stroj a mechanická kalkulačka</a></li>
+              <li><a href="#omezeni">0.5 Omezení reléových počítačů</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#prvni-generace">1. První generace počítačů</a>
+            <ul>
+              <li><a href="#prvni-karty">1.1 ENIAC a UNIVAC I</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#druha-generace">2. Druhá generace počítačů</a>
+            <ul>
+              <li><a href="#model">2.1 Model tranzistoru</a></li>
+              <li><a href="#pocitac">2.2 IBM 1401</a></li>
+              <li><a href="#srovnani">2.3 Elektronka versus tranzistor</a></li>
+              <li><a href="#casova-osa">2.4 Časová osa</a></li>
+              <li><a href="#otazky">2.5 Kontrolní otázky</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
       <article class="content">
     <header class="content-header">
-      <h2>Nultá, první a druhá generace počítačů</h2>
+      <h2>Od relé k tranzistorům</h2>
       <p class="intro">Od elektromechanických relé přes elektronky až k tranzistorům: principy, příklady a omezení jednotlivých generací.</p>
       <p class="student">Jméno: Sebastian Bitto    Třída: S1I    Datum: 16.10.2026.    Rozvržení práce: 15 min       čtení a plán • 55 min řešení.         • 20 min protokol a kontrola.</p>
     </header>
 
     <p class="note"><strong>Než začnu:</strong> Nultou generací se ve školním členění obvykle myslí elektromechanické počítače, které používaly relé. Relé je spínač ovládaný elektromagnetem. Tento protokol ukazuje jen model, žádné skutečné zapojení.</p>
 
+    <section id="nulta-generace">
+    <h2>0. Nultá generace počítačů</h2>
+
     <section id="rele">
-      <h2>1. Jak funguje relé</h2>
+      <h3>0.1 Jak funguje relé</h3>
       <p>Po přivedení proudu do cívky vznikne magnetické pole. To přitáhne pohyblivou část relé a kontakty změní polohu. V jednoduchém modelu může sepnutý kontakt znamenat 1 a rozepnutý kontakt 0. Cívka a spínaný obvod jsou elektricky oddělené.</p>
       <div class="diagram">
         <svg viewBox="0 0 760 220" role="img" aria-labelledby="relay-title relay-desc">
@@ -77,7 +94,7 @@
     </section>
 
     <section id="logika">
-      <h2>2. Dva spínače a modelová žárovka</h2>
+      <h3>0.2 Dva spínače a modelová žárovka</h3>
       <p>Stavy 0 a 1 znamenají rozepnutý a sepnutý spínač. U modelu za sebou musí být sepnuté oba spínače. U modelu vedle sebe stačí, aby byl sepnutý alespoň jeden.</p>
       <div class="models">
         <article class="model" data-model="series">
@@ -139,7 +156,7 @@
     </section>
 
     <section id="historie">
-      <h2>3. Historické karty</h2>
+      <h3>0.3 Historické karty</h3>
       <div class="cards">
         <article class="history-card">
           <h3>Z3</h3>
@@ -165,7 +182,7 @@
     </section>
 
     <section id="porovnani">
-      <h2>4. Reléový stroj a mechanická kalkulačka</h2>
+      <h3>0.4 Reléový stroj a mechanická kalkulačka</h3>
       <table>
         <thead><tr><th>Vlastnost</th><th>Reléový počítač</th><th>Mechanická kalkulačka</th></tr></thead>
         <tbody>
@@ -177,7 +194,7 @@
     </section>
 
     <section id="omezeni">
-      <h2>5. Omezení reléových počítačů</h2>
+      <h3>0.5 Omezení reléových počítačů</h3>
       <ol>
         <li><strong>Nižší rychlost:</strong> kontakt se musí fyzicky pohnout a ustálit, takže relé nepřepíná tak rychle jako elektronický prvek.</li>
         <li><strong>Opotřebení:</strong> při každém přepnutí se části dotknou nebo oddálí. Po mnoha cyklech se kontakty opotřebují a mohou potřebovat údržbu.</li>
@@ -185,10 +202,12 @@
       </ol>
     </section>
 
-    <section id="prvni-generace">
-      <h2>6. První generace počítačů</h2>
+    </section>
 
-      <h3>6.1 Muzejní karty: ENIAC a UNIVAC I</h3>
+    <section id="prvni-generace">
+      <h2>1. První generace počítačů</h2>
+
+      <h3 id="prvni-karty">1.1 Muzejní karty: ENIAC a UNIVAC I</h3>
       <div class="cards">
         <article class="history-card">
           <h3>ENIAC</h3>
@@ -210,7 +229,7 @@
         </article>
       </div>
 
-      <h3>6.2 Relé versus elektronka</h3>
+      <h3>1.2 Relé versus elektronka</h3>
       <table>
         <thead><tr><th>Vlastnost</th><th>Relé</th><th>Elektronka</th></tr></thead>
         <tbody>
@@ -222,7 +241,7 @@
       </table>
       <p class="caption">Jde o obecné srovnání součástek; konkrétní vlastnosti závisely na konstrukci celého stroje.</p>
 
-      <h3>6.3 Výpočet tabulky násobků čísla 7</h3>
+      <h3>1.3 Výpočet tabulky násobků čísla 7</h3>
       <div class="diagram">
         <div class="flow" role="img" aria-label="Vstup číslo 7 a násobitel 1, 2, 3 vede přes násobení k výsledkům 7, 14, 21">
           <div class="flow-step"><strong>VSTUP</strong><br>číslo 7<br>násobitel 1, 2, 3</div>
@@ -244,7 +263,7 @@
         </ol>
       </div>
 
-      <h3>6.4 Muzejní fotografie: programátorky ENIACu</h3>
+      <h3>1.4 Muzejní fotografie: programátorky ENIACu</h3>
       <figure class="photo">
         <a href="https://www.computerhistory.org/revolution/birth-of-the-computer/4/78/317" target="_blank" rel="noopener noreferrer">
           <img src="https://images.computerhistory.org/revonline/images/102618640-03-01.jpg?w=900" alt="Frances Bilas a Betty Jean Jennings stojí u ovládacích panelů počítače ENIAC">
@@ -257,17 +276,17 @@
         <li><strong>Odhad:</strong> panely sahají přibližně do výšky dospělého člověka; přesné rozměry z fotografie určit nelze.</li>
       </ol>
 
-      <h3>6.5 Přehled pro návštěvníka muzea (85 slov)</h3>
+      <h3>1.5 Přehled pro návštěvníka muzea (85 slov)</h3>
       <p class="intro">První generace (zhruba 40. a 50. léta 20. století) využívala elektronky ke spínání a elektronické obvody k výpočtům. Oproti relé se tok proudu řídil bez mechanicky pohyblivého kontaktu, což umožnilo výrazně vyšší rychlost. Elektronky však spotřebovávaly mnoho energie, zahřívaly se a poruchy vyžadovaly údržbu; zařízení proto často zabírala místnosti. Nešlo o jediný typ stroje: ENIAC se nastavoval kabely a přepínači, zatímco UNIVAC I pracoval s magnetickými páskami a sloužil i zpracování dat. Elektronkové počítače položily základy automatizovaného výpočtu, ale byly drahé, rozměrné a provozně náročné.</p>
     </section>
 
     <section id="druha-generace">
-      <h2>7. Druhá generace počítačů</h2>
+      <h2>2. Druhá generace počítačů</h2>
       <p class="intro">Od elektronky k tranzistoru: polovodičové součástky pomohly zmenšit a zefektivnit počítače.</p>
       <p class="note"><strong>Důležité rozlišení:</strong> Tranzistor je součástka, ne celý procesor ani počítač. Číslicové obvody propojují mnoho spínacích prvků do složitější logiky. Následující model znázorňuje tranzistor jako řízený spínač, nikoli jako skutečné elektrické zapojení.</p>
 
       <section id="model">
-        <h2>7.1 Funkční model tranzistoru jako spínače</h2>
+        <h3>2.1 Funkční model tranzistoru jako spínače</h3>
         <p>Vstupní signál řídí spínač. Při signálu 0 je spínač otevřený a zátěž je vypnutá; při signálu 1 se spínač sepne a zátěž se zapne. Nákres je funkční pomůcka, ne návod k zapojení součástek.</p>
         <div class="diagram">
           <svg viewBox="0 0 760 240" role="img" aria-labelledby="transistor-title transistor-desc">
@@ -299,9 +318,9 @@
       </section>
 
       <section id="pocitac">
-        <h2>7.2 Karta tranzistorového počítače: IBM 1401</h2>
+        <h3>2.2 Karta tranzistorového počítače: IBM 1401</h3>
         <article class="history-card">
-          <h3>IBM 1401</h3>
+          <h4>IBM 1401</h4>
           <dl>
             <dt>Rok</dt><dd>1959</dd>
             <dt>Využití</dt><dd>Zpracování obchodních dat, například účetnictví, fakturace a evidence zásob.</dd>
@@ -313,7 +332,7 @@
       </section>
 
       <section id="srovnani">
-        <h2>7.3 Elektronka versus tranzistor</h2>
+        <h3>2.3 Elektronka versus tranzistor</h3>
         <p>Srovnání popisuje obecné vlastnosti součástek a jejich běžný dopad na návrh počítačů; nejde o stejný číselný poměr pro všechny stroje.</p>
         <table>
           <thead>
@@ -331,7 +350,7 @@
       </section>
 
       <section id="casova-osa">
-        <h2>7.4 Časová osa spínacích technologií</h2>
+        <h3>2.4 Časová osa spínacích technologií</h3>
         <div class="timeline" aria-label="Vývoj od mechanických prvků k tranzistorům">
           <article class="timeline-step">
             <h3>Mechanika</h3>
@@ -354,7 +373,7 @@
       </section>
 
       <section id="otazky">
-        <h2>7.5 Kontrolní otázky a odpovědi</h2>
+        <h3>2.5 Kontrolní otázky a odpovědi</h3>
         <ol>
           <li><strong>Co dělá tranzistor v modelu spínače?</strong><br>Vstupní signál řídí, zda tranzistor dovolí průchod proudu do zátěže.</li>
           <li><strong>Je tranzistor totéž co procesor?</strong><br>Ne. Tranzistor je jedna součástka; procesor obsahuje mnoho propojených obvodů a součástek.</li>
