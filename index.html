@@ -43,6 +43,16 @@
               <li><a href="#otazky">3.5 Kontrolní otázky</a></li>
             </ul>
           </li>
+          <li>
+            <a href="#treti-generace">4. Třetí generace počítačů</a>
+            <ul>
+              <li><a href="#urovne-cipu">4.1 Od tranzistoru k počítači</a></li>
+              <li><a href="#priklady-cipu">4.2 Intel 4004 a Altair 8800</a></li>
+              <li><a href="#generace-ic">4.3 Třetí a čtvrtá generace</a></li>
+              <li><a href="#pametovy-cip">4.4 Čip nemusí být procesor</a></li>
+              <li><a href="#osobni-pocitace">4.5 Proč se počítače zmenšovaly</a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
 
@@ -383,6 +393,111 @@
       </section>
 
       <p class="note"><strong>Kontrola před odevzdáním:</strong> Nezaměňuji tranzistor s integrovaným obvodem ani celým počítačem. Údaje z externích zdrojů mají uveden název, odkaz a datum přístupu.</p>
+    </section>
+
+    <section id="treti-generace">
+      <h2>4. Třetí generace počítačů – integrovaný obvod</h2>
+      <p class="intro">Integrovaný obvod sdružuje více elektronických prvků na jednom čipu. Ve školním členění je typický pro třetí generaci. Mikroprocesor soustřeďuje funkce procesoru do integrovaného obvodu a spojuje se se čtvrtou generací. Počítač však dál potřebuje paměť, napájení a vstupy či výstupy. Čip tedy nemusí být procesor.</p>
+
+      <section id="urovne-cipu">
+        <h3>4.1 Od tranzistoru k počítači</h3>
+        <p>Jednotlivé úrovně na sebe navazují: součástky tvoří obvody a obvody jsou součástí počítačového systému.</p>
+        <div class="diagram">
+          <svg viewBox="0 0 760 360" role="img" aria-labelledby="levels-title levels-desc">
+            <title id="levels-title">Čtyři úrovně od tranzistoru k počítači</title>
+            <desc id="levels-desc">Tranzistor spíná nebo zesiluje signál. Integrovaný obvod spojuje více prvků. Mikroprocesor vykonává instrukce jako procesor. Počítač zpracovává programy s pomocí paměti, vstupů a výstupů.</desc>
+            <g fill="#ffffff" stroke="#426a4a" stroke-width="2">
+              <rect x="70" y="12" width="620" height="62" rx="8" />
+              <rect x="70" y="103" width="620" height="62" rx="8" />
+              <rect x="70" y="194" width="620" height="62" rx="8" />
+              <rect x="70" y="285" width="620" height="62" rx="8" />
+            </g>
+            <g fill="#202820" font-family="Arial, sans-serif" text-anchor="middle">
+              <text x="380" y="38" font-size="18" font-weight="bold">1. Tranzistor</text>
+              <text x="380" y="59" font-size="15">spíná nebo zesiluje elektrický signál</text>
+              <text x="380" y="129" font-size="18" font-weight="bold">2. Integrovaný obvod</text>
+              <text x="380" y="150" font-size="15">sdružuje více prvků a provádí funkci obvodu</text>
+              <text x="380" y="220" font-size="18" font-weight="bold">3. Mikroprocesor</text>
+              <text x="380" y="241" font-size="15">načítá a vykonává instrukce jako procesor</text>
+              <text x="380" y="311" font-size="18" font-weight="bold">4. Počítač</text>
+              <text x="380" y="332" font-size="15">zpracovává programy pomocí paměti a vstupů/výstupů</text>
+            </g>
+            <g fill="none" stroke="#426a4a" stroke-width="3">
+              <path d="M380 74 V96 M372 88 L380 96 L388 88" />
+              <path d="M380 165 V187 M372 179 L380 187 L388 179" />
+              <path d="M380 256 V278 M372 270 L380 278 L388 270" />
+            </g>
+          </svg>
+          <p class="caption">Schéma zobrazuje součástku, obvod, procesor a celý systém. Počítač se skládá z více částí, nejen z procesoru.</p>
+        </div>
+      </section>
+
+      <section id="priklady-cipu">
+        <h3>4.2 Dva příklady z počátků mikroprocesorů a osobních počítačů</h3>
+        <div class="cards">
+          <article class="history-card">
+            <h4>Intel 4004</h4>
+            <dl>
+              <dt>Rok</dt><dd>1971</dd>
+              <dt>Účel</dt><dd>Vznikl v rámci zakázky pro kalkulačku Busicom 141-PF. Intel jej představil jako programovatelný mikroprocesor pro zpracování instrukcí.</dd>
+              <dt>Proč je důležitý</dt><dd>Procesorové funkce byly soustředěny do jediného čipu. Mikroprocesor je tedy zvláštní typ integrovaného obvodu, ne synonymum pro každý čip.</dd>
+            </dl>
+            <p class="source"><strong>Primární zdroj:</strong> Intel, <a href="https://www.intel.com/content/www/us/en/history/virtual-vault/articles/the-intel-4004.html" target="_blank" rel="noopener noreferrer">The Intel 4004</a>. Přístup 5. 11. 2026.</p>
+          </article>
+          <article class="history-card">
+            <h4>Altair 8800</h4>
+            <dl>
+              <dt>Rok</dt><dd>1975</dd>
+              <dt>Účel</dt><dd>Počítačová stavebnice pro nadšence, určená k sestavení a programování. Uživatelé zadávali příkazy přepínači a výstup sledovali na kontrolkách.</dd>
+              <dt>Proč je důležitý</dt><dd>Patřil k raným osobním počítačům a zpřístupnil práci s počítačem jednotlivcům mimo velké instituce.</dd>
+            </dl>
+            <p class="source"><strong>Muzejní zdroj:</strong> Computer History Museum, <a href="https://www.computerhistory.org/timeline/1975/" target="_blank" rel="noopener noreferrer">Timeline of Computer History: 1975</a>. Přístup 5. 11. 2026.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="generace-ic">
+        <h3>4.3 Třetí a čtvrtá generace</h3>
+        <p>Školní rozdělení zdůrazňuje typický prvek; roky i hranice generací se v různých přehledech mohou lišit a nejsou ostré.</p>
+        <div class="diagram">
+          <table>
+            <thead>
+              <tr><th>Generace</th><th>Typický prvek</th><th>Velikost zařízení</th><th>Využití</th><th>Příklad</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Třetí</th>
+                <td>Integrované obvody s více propojenými prvky</td>
+                <td>Často stále skříňový systém či počítač pro sál, menší než starší stroje</td>
+                <td>Podnikové, vědecké a institucionální zpracování dat</td>
+                <td>IBM System/360</td>
+              </tr>
+              <tr>
+                <th scope="row">Čtvrtá</th>
+                <td>Mikroprocesor – procesorové funkce na jednom čipu</td>
+                <td>Možné jsou stolní, osobní a později přenosné počítače</td>
+                <td>Výpočty a zpracování dat dostupné jednotlivcům, školám i firmám</td>
+                <td>Altair 8800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="source"><strong>Historické přehledy:</strong> Computer History Museum, <a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank" rel="noopener noreferrer">The Silicon Engine: Timeline</a> a <a href="https://www.computerhistory.org/timeline/1964/" target="_blank" rel="noopener noreferrer">Timeline of Computer History: 1964</a> (IBM System/360). Časové hranice generací jsou zjednodušené.</p>
+      </section>
+
+      <section id="pametovy-cip">
+        <h3>4.4 Čip nemusí být procesor</h3>
+        <p>Příkladem je paměťový čip Intel 1103: ukládá data v paměťových buňkách DRAM, ale sám nevykonává instrukce jako procesor. Je to integrovaný obvod s jinou úlohou. Počítač může obsahovat samostatný procesorový čip i několik paměťových čipů; k fungování potřebuje také napájení a vstupy či výstupy.</p>
+        <p class="source"><strong>Muzejní zdroj:</strong> Computer History Museum, <a href="https://www.computerhistory.org/timeline/memory-storage/#169ebbe2ad45559efbc6eb35720a2e7b" target="_blank" rel="noopener noreferrer">Intel 1103 memory chip</a>.</p>
+      </section>
+
+      <section id="osobni-pocitace">
+        <h3>4.5 Proč se počítače zmenšovaly (86 slov)</h3>
+        <p class="intro">Zmenšování součástek umožnilo umístit více logických prvků na menší plochu a zkracovalo propojení mezi nimi. Integrované obvody proto zabíraly méně místa než stejné množství samostatných součástek a jejich výroba ve větších sériích mohla snižovat cenu. S příchodem mikroprocesoru se funkce procesoru soustředily do jediného čipu, což zjednodušilo návrh menších počítačů. Menší rozměry a nižší cena umožnily vznik počítačových stavebnic a později osobních počítačů pro domácnosti, školy a malé firmy. Nešlo jen o čip: k praktickému počítači byly potřeba také paměť, napájení, vstupy, výstupy a dostupný software.</p>
+      </section>
+
+      <p class="note"><strong>Kontrola před odevzdáním:</strong> Pojmy integrovaný obvod a mikroprocesor nepoužívám jako úplná synonyma. Čip může plnit například paměťovou funkci, aniž by byl procesorem. Uvedl jsem roky, účely a primární či muzejní zdroje.</p>
+      <p class="source"><strong>Výchozí zdroj:</strong> <a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank" rel="noopener noreferrer">Computer History Museum – The Silicon Engine: Timeline</a>.</p>
     </section>
 
       </article>
